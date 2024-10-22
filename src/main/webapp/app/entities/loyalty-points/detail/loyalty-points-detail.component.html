@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (loyaltyPoints(); as loyaltyPointsRef) {
+      <div>
+        <h2 data-cy="loyaltyPointsDetailsHeading">
+          <span jhiTranslate="loyaltyApplicationApp.loyaltyPoints.detail.title">Loyalty Points</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ loyaltyPointsRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="loyaltyApplicationApp.loyaltyPoints.statusPoints">Status Points</span></dt>
+          <dd>
+            <span>{{ loyaltyPointsRef.statusPoints }}</span>
+          </dd>
+          <dt><span jhiTranslate="loyaltyApplicationApp.loyaltyPoints.myPoints">My Points</span></dt>
+          <dd>
+            <span>{{ loyaltyPointsRef.myPoints }}</span>
+          </dd>
+          <dt><span jhiTranslate="loyaltyApplicationApp.loyaltyPoints.riskEpurationPoints">Risk Epuration Points</span></dt>
+          <dd>
+            @if (loyaltyPoints()!.riskEpurationPoints) {
+              <div>
+                <a [routerLink]="['/risk-epuration-points', loyaltyPoints()!.riskEpurationPoints?.id, 'view']">{{
+                  loyaltyPointsRef.riskEpurationPoints?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/loyalty-points', loyaltyPointsRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
