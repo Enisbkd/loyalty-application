@@ -1,0 +1,31 @@
+entity Client {
+id Integer
+firstName String
+lastName String
+email String
+dateOfBirth String
+emailVerified Boolean
+signUpDate String
+}
+
+entity LoyaltyPoints {
+statusPoints Integer
+myPoints Integer 
+}
+
+entity RiskEpurationPoints{
+points Integer
+validUntil Integer
+}
+
+relationship OneToOne {
+  LoyaltyPoints to RiskEpurationPoints
+}
+
+
+paginate Client with pagination
+paginate LoyaltyPoints with pagination
+paginate RiskEpurationPoints with pagination
+
+
+service all with serviceImpl
