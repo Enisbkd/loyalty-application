@@ -1,0 +1,26 @@
+{
+  "loyaltyApplicationApp": {
+    "riskEpurationPoints": {
+      "home": {
+        "title": "Risk Epuration Points",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Risk Epuration Points",
+        "createOrEditLabel": "Create or edit a Risk Epuration Points",
+        "notFound": "No Risk Epuration Points found"
+      },
+      "created": "A new Risk Epuration Points is created with identifier {{ param }}",
+      "updated": "A Risk Epuration Points is updated with identifier {{ param }}",
+      "deleted": "A Risk Epuration Points is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Risk Epuration Points {{ id }}?"
+      },
+      "detail": {
+        "title": "Risk Epuration Points"
+      },
+      "id": "ID",
+      "points": "Points",
+      "validUntil": "Valid Until",
+      "loyaltyPoints": "Loyalty Points"
+    }
+  }
+}

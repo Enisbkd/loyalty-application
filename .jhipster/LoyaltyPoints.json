@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20241022101653"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "statusPoints",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "myPoints",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "LoyaltyPoints",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "riskEpurationPoints",
+      "otherEntityRelationshipName": "loyaltyPoints",
+      "relationshipName": "riskEpurationPoints",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

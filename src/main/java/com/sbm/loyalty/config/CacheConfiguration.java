@@ -50,6 +50,9 @@ public class CacheConfiguration {
             createCache(cm, com.sbm.loyalty.domain.User.class.getName());
             createCache(cm, com.sbm.loyalty.domain.Authority.class.getName());
             createCache(cm, com.sbm.loyalty.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.sbm.loyalty.domain.Client.class.getName());
+            createCache(cm, com.sbm.loyalty.domain.LoyaltyPoints.class.getName());
+            createCache(cm, com.sbm.loyalty.domain.RiskEpurationPoints.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
