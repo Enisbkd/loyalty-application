@@ -95,7 +95,7 @@ spring:
     name: LoyaltyApplication
   docker:
     compose:
-      enabled: true
+      enabled: false
       lifecycle-management: start-only
       file: src/main/docker/services.yml
   profiles:
@@ -135,6 +135,12 @@ spring:
       hibernate.criteria.literal_handling_mode: BIND
       hibernate.query.fail_on_pagination_over_collection_fetch: true
       hibernate.query.in_clause_parameter_padding: true
+      hibernate.query.mutation_strategy.local_temporary.drop_tables: true
+
+      hibernate:
+        format_sql: true
+        show_sql: true
+        use_sql_comments: true
     hibernate:
       ddl-auto: none
       naming:

@@ -30,17 +30,10 @@ spring:
   jackson:
     serialization:
       indent-output: true
-  datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: system
-    password: oracle
-    hikari:
-      poolName: Hikari
-      auto-commit: false
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
+    enabled: false
   mail:
     host: localhost
     port: 25
@@ -105,3 +98,15 @@ jhipster:
 # ===================================================================
 
 # application:
+
+
+spring.datasource.todos.url: jdbc:oracle:thin:@2gammadev.sbm.resort:1521/dgd
+spring.datasource.todos.username: x01087
+spring.datasource.todos.password: JN4MYHAV3D8RsxtrKcqn
+spring.datasource.todos.driver-class-name: oracle.jdbc.OracleDriver
+#spring.jpa.properties.hibernate.dialect:org.hibernate.dialect.Oracle10gDialect
+
+spring.datasource.topics.url: jdbc:oracle:thin:@orctst12.sbm.resort:1521/sbmtest12
+spring.datasource.topics.username: x01087
+spring.datasource.topics.password: UEO8XsIxbaguiHZWtT6P
+spring.datasource.topics.driver-class-name: oracle.jdbc.OracleDriver
